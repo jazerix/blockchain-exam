@@ -18,6 +18,24 @@ When creating a Hyperledger network we need to:
 - Install chaincode
 - Add applications
 
+## Transaction flow
+
+1. Client broadcasts transaction proposal to peers
+2. Peers invoke the proposal through shared chaincode
+   1. On success: Transaction is endorsed
+3. Return endorsed transaction back to client
+4. Client sends **endorsed** transaction to ordering service nodes
+5. Ordering nodes receive the request
+6. The ordering nodes collaborate and order the incoming transactions
+7. Block is committed to the blockchain
+8. Block is returned to listening peers (in the same channel)
+9. Peers validate all transactions against endorsement policy
+   1.  Should a transaction fail validation, peers will mark it as invalid
+10. Each peer appends the block to the channel's chain and every valid transaction is added to the will be comitted to the state datebase.
+11. Client is notified
+
+Source: [Transaction Flow](https://hyperledger-fabric.readthedocs.io/en/release-2.2/txflow.html)
+
 ## Overview
 
 ### Organizations
@@ -110,3 +128,12 @@ Such an algorithm doesn't exist within Hyperledger Fabric, so it uses an orderin
 Forks in the blockchain are not possible within Hyperledger Fabric, as transactions are either validated by all members and committed onto the blockchain or discarded. 
 
 When chaincode is updated, the compiled code needs to be deployed on each peer within the blockchain. This approach is widely different from Bitcoin and Ethereum, where the actual code is part of the transaction and then run by nodes. Within Hyperledger Fabric, only the params of the methods are pushed onto the blockchain, and the participating nodes then execute the contract with the given input and endorse the transaction if it succeeds. 
+
+## Questions
+
+- What does it mean that Hyperledger's consensus is deterministic?
+  - Before transactions are broadcasted in hyperledger, they are endorsed. After endorsement they are ensured to be included within the blockchain - this is very different from a public blockchain, where the algorithm is probablistic.
+- What is the batch size?
+  - Number of transactions a block can hold
+- What is the batch timeout?
+  - Time to wait before batching the transactions into a block

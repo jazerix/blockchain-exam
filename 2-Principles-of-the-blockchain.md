@@ -22,3 +22,5 @@ Smart contracts are programs deployed as data in the blockchain ledger and execu
 - If consensus is maintained by consortium a private blockchain should be used, else a public blockchain.
 
 A Merkle tree is a data structure used to handle the ledger. The ledger contains a linked list of Merkle trees. In a Merkle tree, every leaf node is labelled with the hash of the data. Every non-leaf node is labelled with the hash of the labels of its child nodes. Each node in the linked list is connected to the previous node through the hash of the Merkle roots.
+
+## Questions
