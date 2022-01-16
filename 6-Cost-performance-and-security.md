@@ -24,7 +24,7 @@ As long as one node is theoretically available, the entirety of the system is av
 
 ## Security
 
-A permissionless blockchain uses it's consensus algorithm along with crytpography to ensure integrity when transacting. Due to the nature of decentralization, the system is inherently secure, as a hacker would need to have access to a majority of nodes to be able to alter the thruthiness of the blockchain. Additionally since the blockchain transactions are signed using a private key, a hacker would need it to impersonate someone.
+A permissionless blockchain uses it's consensus algorithm along with cryptography to ensure integrity when transacting. Due to the nature of decentralization, the system is inherently secure, as a hacker would need to have access to a majority of nodes to be able to alter the thruthiness of the blockchain. Additionally since the blockchain transactions are signed using a private key, a hacker would need it to impersonate someone.
 
 ## Questions
 
@@ -41,4 +41,4 @@ A permissionless blockchain uses it's consensus algorithm along with crytpograph
 - Are permissioned (hyperledger) blockchains maintainable?
   - Yes, way easier than public ones. You only need to update the peers in the same channel.
 - Are public blockchains maintainable?
-  -  Yes, but the majority needs to accept it and update. Additionally a blockchain can be split, if some participants don't want to update.
+  - Yes, but the majority needs to accept it and update. Additionally a blockchain can be split, if some participants don't want to update.

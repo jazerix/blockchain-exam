@@ -133,6 +133,10 @@ When chaincode is updated, the compiled code needs to be deployed on each peer w
 
 ## Questions
 
+- What does it mean to be a private/permissioned blockchain?
+  - You need authentication and authorization to transact on it
+- How does Hyperledger process transactions compare to bitcoin & ethereum?
+  - Bitcoin and ethereum use order, execute where hyperledger utilise execute, order, and validate, (state changes committed).
 - What does it mean that Hyperledger's consensus is deterministic?
   - Before transactions are broadcasted in hyperledger, they are endorsed. After endorsement they are ensured to be included within the blockchain - this is very different from a public blockchain, where the algorithm is probablistic.
 - What is the batch size?
@@ -149,3 +153,28 @@ When chaincode is updated, the compiled code needs to be deployed on each peer w
   - Membership Service Provider, despite the name, just a folder of "accepted" certificates. The MSP contains a list of permissioned identities, whereas Certificate Authorities generate the certificates that represent identities.
 - Who turns an identity into a role?
   - The MSP
+- What are organizations?
+  - A grouping of peers. Peers belong to organization. 
+- What are network configurations?
+  - Configures settings as order relationship (with channels).
+- What is the ordering service?
+  - It orders transactions into a block and distributes blocks to connected peers.
+- What is a channel configuration?
+- What is the ledger?
+  - A ledger is the combination of the world state and the blockchain
+- What is a smart contract?
+  - A smart contract in hyperledger is defined by chaincode. Multiple smart contracts can be defined within the same chaincode. When chaincode is deployed all smart contract within it are made available to the applications.
+- What is a client application?
+  - Applications that interact with the blockchain
+- What is a peer?
+  - An identify/user interacting with the blockchain
+- What is a certificate authority?
+  - In charge of issuing certificates that allow access to the blockchain. Each member receives one root certificate.
+- How does the blockchain affect the world state?
+  - As the blockchain is changing over time, the lastest state is updated within the world state.
+- How many ledgers are there?
+  - One for each channel. Peers participating in multiple channels therefore have multiple ledgers.
+- What 5 things does the network comprise of?
+  - Channels, peers, smart contracts (chaincode), ledgers, ordering services
+- Is the orderer service strictly required?
+  - No, but you need to find a different consensus strategy if you remove it.
