@@ -87,7 +87,7 @@ The Nakamoto consensus also states what should happen when a fork occurs. A bloc
 
 ## Questions
 
-- What is non-repudiation?
+- What is non\-repudiation?
   - You cannot change your mind about an aggrement, in terms of blockchain, you can't change a transaction after it has been processed. Additionally, the identity of the user is bound to their key, making it cryptographically secure, thus a user can't claim that key wasn't used for the transaction.
 - How are miners rewarded?
   - Only when the correct hash has been found / discovering blocks. If the blockchain forks and your block is not included you do not get a reward.
@@ -99,7 +99,7 @@ The Nakamoto consensus also states what should happen when a fork occurs. A bloc
   - Nakamoto consensus (longest chain wins)
 - How does a fork occur?
   - A fork occurs when two (or more) blocks are found at roughly the same time and the miners disagree on what is the current one. This is due to the nature of a P2P network, where data is propagated throughout the network.
-- How does bitcoin prevent double-spending of coins?
+- How does bitcoin prevent double spending of coins?
   - A nodes contains a list of UTXO (unspent transaction outputs) which can be combined into a balance for the node. A locking script is used for every outgoing transactions with a list of conditions which needs to hold before the coins can be spent. An unlocking script is placed on the input that satisfies the locking script. This means that the transaction only can be included in the block, if the node actually has the balance defined in the transaction. 
 - What happens when a fork occurs?
   - Users will have to wait for more blocks to complete to confirm the longest chain.

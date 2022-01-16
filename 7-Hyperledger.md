@@ -147,7 +147,7 @@ When chaincode is updated, the compiled code needs to be deployed on each peer w
   - They create certificates that clients use to authenticate with the network
 - What is an endorsement policy?
   - It determines how many peers should agree to a "proposal" (transaction), are set on a channel basis.
-- What is replay-attack protection?
+- What is replay attack protection?
   - Endorsing nodes ensure a transaction hasn't already been submitted, thus disallowing double spending.
 - What is an MSP?
   - Membership Service Provider, despite the name, just a folder of "accepted" certificates. The MSP contains a list of permissioned identities, whereas Certificate Authorities generate the certificates that represent identities.
@@ -160,6 +160,7 @@ When chaincode is updated, the compiled code needs to be deployed on each peer w
 - What is the ordering service?
   - It orders transactions into a block and distributes blocks to connected peers.
 - What is a channel configuration?
+  - Channel specific settings, such as how many endorses should endorse transactions
 - What is the ledger?
   - A ledger is the combination of the world state and the blockchain
 - What is a smart contract?

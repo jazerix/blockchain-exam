@@ -48,9 +48,6 @@ See table in task 1.
 ## Questions
 
 - When does it make sense to use a blockchain over a traditional database?
-  - When you have multipe different users where trust is low or they want to share responsibility of the process
-  - Data transparency
-  - When you want to use decentralization
-  - When you want anonymity
+  - When you have multipe different users where trust is low or they want to share responsibility of the process: Data transparency, when you want to use decentralization, when you want anonymity.
 - What are the levels of decentralization?
   - Public / permissioned

@@ -30,7 +30,7 @@ A permissionless blockchain uses it's consensus algorithm along with cryptograph
 
 - What happens if your fee doesn't cover the computing resources required to finish (ethereum)?
   - The fee will be taken, the code that affected the state of the blockchain will be rolled back.
-- Will basic performance requirements be met by the design of a blockchain-based system?
+- Will basic performance requirements be met by the design of a blockchainbased system?
   - Not currently, as it's unable to keep up with demand
 - What is a public key?
   - A public key is derived from your private key and can used to make sure that things you sign with your private key match the public one. In blockchain this is used to ensure that you are actually the sender of the transaction.

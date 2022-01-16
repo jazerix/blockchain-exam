@@ -29,7 +29,7 @@ Decentralization also makes the entire network resilient, if one node goes down,
   - They can manipulate the contents of the database
 - How many nodes participate in the bitcoin blockchain?
   - Roughly 15k
-- What does permission-less mean?
+- What does permissionless mean?
   - No one has more power than anyone else, the only thing that separates them are the processing power they deliver (PoW)
 - What is a sybil attack?
   - Being able to create identities "cheaply" and thus can flood a system to get majority say
@@ -42,6 +42,6 @@ Decentralization also makes the entire network resilient, if one node goes down,
 - How is the blockchain concurrent?
   - Transactions are executed multiple times by nodes participating in network, however they are ordered, thus actual concurrency is debatable.
 - Are centralized systems faster than decentralized?
-  - Almost always - centralized systems can concurrently split tasks. There isn't any inherent need for synchronization.
+  - Almost always, centralized systems can concurrently split tasks. There isn't any inherent need for synchronization.
 - Do all transactions need to be executed in a permissioned blockchain (Hyperledger)?
   - No, you can specify an endorsement policy (the lower the higher the throughput)
