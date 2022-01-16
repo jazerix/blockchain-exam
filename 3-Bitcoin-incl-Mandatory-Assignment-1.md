@@ -87,7 +87,7 @@ The Nakamoto consensus also states what should happen when a fork occurs. A bloc
 
 ## Questions
 
-- What is non-repduiation?
+- What is non-repudiation?
   - You cannot change your mind about an aggrement, in terms of blockchain, you can't change a transaction after it has been processed. Additionally, the identity of the user is bound to their key, making it cryptographically secure, thus a user can't claim that key wasn't used for the transaction.
 - How are miners rewarded?
   - Only when the correct hash has been found / discovering blocks. If the blockchain forks and your block is not included you do not get a reward.
@@ -95,7 +95,21 @@ The Nakamoto consensus also states what should happen when a fork occurs. A bloc
   -  The rewards halves after the creation of every 210,000 blocks / roughly every 4 years. The first reward was 50 and the current reward is 6.25 BTC.
 - What is the block time?
   - Roughly 10 minutes. If the computation power of the network increases, the difficulty of finding a new block increases as well. This can happen from block to block based on the network protocol.
+- Which consensus algorithm does bitcoin utilise?
+  - Nakamoto consensus (longest chain wins)
+- How does a fork occur?
+  - A fork occurs when two (or more) blocks are found at roughly the same time and the miners disagree on what is the current one. This is due to the nature of a P2P network, where data is propagated throughout the network.
+- How does bitcoin prevent double-spending of coins?
+  - A nodes contains a list of UTXO (unspent transaction outputs) which can be combined into a balance for the node. A locking script is used for every outgoing transactions with a list of conditions which needs to hold before the coins can be spent. An unlocking script is placed on the input that satisfies the locking script. This means that the transaction only can be included in the block, if the node actually has the balance defined in the transaction. 
 - What happens when a fork occurs?
   - Users will have to wait for more blocks to complete to confirm the longest chain.
 - What happens if a fork is abandoned?
   - It introduces latency, and transactions that were abandoned will be re-pooled.
+- Who pays the transaction fee?
+  - The fee will be subtracted from the amount sent, thus the sender will be paying.
+- Is bitcoin turing complete?
+  - No, bitcoin is unable to process anything that contains loops
+- Why is it essential that bitcoin ISN'T turing complete?
+  - It removes the risk of transactions running infinitely (halting problem)
+- What are the flow control statements in bitcoin script?
+  - NOP (does nothing), IF, NOTIF, ELSE, ENDIF, VERIFY (marks a transaction as valid or invalid) and RETURN.

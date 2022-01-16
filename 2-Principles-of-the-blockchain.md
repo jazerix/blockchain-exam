@@ -53,3 +53,5 @@ A Merkle tree is a data structure used to handle the ledger. The ledger contains
   - A mechanism used to reward miners for their participation in the network.
 - How do we limit entities power when participating in the network?
   - In proof of work an identity means nothing without the processing behind it.
+- What is an oracle?
+  - A service that is able to leverage information from outside of the blockchain ecosystem (such as the current weather in Helsinki).
