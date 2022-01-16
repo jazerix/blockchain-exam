@@ -21,7 +21,7 @@ When creating a Hyperledger network we need to:
 ## Transaction flow
 
 1. Client broadcasts transaction proposal to peers
-2. Peers invoke the proposal through shared chaincode
+2. Peers invoke and execute the proposal through shared chaincode
    1. On success: Transaction is endorsed
 3. Return endorsed transaction back to client
 4. Client sends **endorsed** transaction to ordering service nodes
@@ -33,6 +33,8 @@ When creating a Hyperledger network we need to:
    1.  Should a transaction fail validation, peers will mark it as invalid
 10. Each peer appends the block to the channel's chain and every valid transaction is added to the will be comitted to the state datebase.
 11. Client is notified
+
+![](assets/2022-01-16-01-09-25.png)
 
 Source: [Transaction Flow](https://hyperledger-fabric.readthedocs.io/en/release-2.2/txflow.html)
 
@@ -137,3 +139,13 @@ When chaincode is updated, the compiled code needs to be deployed on each peer w
   - Number of transactions a block can hold
 - What is the batch timeout?
   - Time to wait before batching the transactions into a block
+- Why are CA's neccessary?
+  - They create certificates that clients use to authenticate with the network
+- What is an endorsement policy?
+  - It determines how many peers should agree to a "proposal" (transaction), are set on a channel basis.
+- What is replay-attack protection?
+  - Endorsing nodes ensure a transaction hasn't already been submitted, thus disallowing double spending.
+- What is an MSP?
+  - Membership Service Provider, despite the name, just a folder of "accepted" certificates. The MSP contains a list of permissioned identities, whereas Certificate Authorities generate the certificates that represent identities.
+- Who turns an identity into a role?
+  - The MSP
