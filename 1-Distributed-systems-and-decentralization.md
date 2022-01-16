@@ -35,3 +35,13 @@ Decentralization also makes the entire network resilient, if one node goes down,
   - Being able to create identities "cheaply" and thus can flood a system to get majority say
 - What is a 51% attack?
   - The fact that if one user holds 51% of the processing power, they essentially control consensus. In reality an attacker would need much less than 51% to get majority, as not all nodes would be able to band together.
+- Why do we want our system to be decentralized?
+  - Redudancy, concurrency, decreased latency and versatility (No single point of failure).
+- What is the downsides of decentralization?
+  - Data needs to be synchronized across nodes. It's more costly.
+- How is the blockchain concurrent?
+  - Transactions are executed multiple times by nodes participating in network, however they are ordered, thus actual concurrency is debatable.
+- Are centralized systems faster than decentralized?
+  - Almost always - centralized systems can concurrently split tasks. There isn't any inherent need for synchronization.
+- Do all transactions need to be executed in a permissioned blockchain (Hyperledger)?
+  - No, you can specify an endorsement policy (the lower the higher the throughput)

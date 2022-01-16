@@ -1,5 +1,16 @@
 # Bitcoin incl. Mandatory Assignment 1
 
+## Header
+
+| Version        | Block version number                                    | Updated when                                            | Size (Bytes) |
+|----------------|---------------------------------------------------------|---------------------------------------------------------|--------------|
+| Version        | Block version number                                    | You upgrade the software and it specifies a new version | 4            |
+| hashPrevBlock  | 256-bit hash of the previous block header               | A new block comes in                                    | 32           |
+| hashMerkleRoot | 256-bit hash based on all the transactions in the block | A transaction is accepted                               | 32           |
+| Time           | Current block timestamp as seconds since epoch          | Every few seconds                                       | 4            |
+| Bits           | Current target in compact format                        | The difficulty is adjusted                              | 4            |
+| Nonce          | 32-bit number (starts at 0)                             | A hash is tried (increments)                            | 4            |
+
 ## Daniel
 
 The bitcoin network works as follows:
@@ -74,7 +85,17 @@ Identities in a network come cheap, making it easy for an attacker to create man
  
 The Nakamoto consensus also states what should happen when a fork occurs. A blockchain may experience a disagreement on the current state when one or more nodes simultaneously (or at least an overlap can happen as propagation through the network is happening) solve the hash problem. Thus a fork is created, at which point we now have multiple sources of truth within our network, which is unacceptable, especially when we're talking about currencies like bitcoin. In these instances, the longest chain is chosen as the single source of truth, and the other chains will be abandoned.
 
-# Questions
+## Questions
 
 - What is non-repduiation?
   - You cannot change your mind about an aggrement, in terms of blockchain, you can't change a transaction after it has been processed. Additionally, the identity of the user is bound to their key, making it cryptographically secure, thus a user can't claim that key wasn't used for the transaction.
+- How are miners rewarded?
+  - Only when the correct hash has been found / discovering blocks. If the blockchain forks and your block is not included you do not get a reward.
+- How much do miners receive when they mine a block?
+  -  The rewards halves after the creation of every 210,000 blocks / roughly every 4 years. The first reward was 50 and the current reward is 6.25 BTC.
+- What is the block time?
+  - Roughly 10 minutes. If the computation power of the network increases, the difficulty of finding a new block increases as well. This can happen from block to block based on the network protocol.
+- What happens when a fork occurs?
+  - Users will have to wait for more blocks to complete to confirm the longest chain.
+- What happens if a fork is abandoned?
+  - It introduces latency, and transactions that were abandoned will be re-pooled.

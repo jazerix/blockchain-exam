@@ -43,3 +43,12 @@ Ethereum supports smart contracts at its core; not only does this allow for alte
 ### Give some examples of smart contracts or areas that could benefit from smart contracts.
 
 Escrow is a big topic within smart contracts. Sites like Den Blå Avis could utilize a smart contract to ensure the buyer has the funds to cover the transaction and that money is only transferred once the buyer has received the package (this would require an oracle that could pull data from tracking sites). Betting sites can also use smart contracts to show how their randomness is calculated, making it more transparent.
+
+## Questions
+
+- What are uncle blocks?
+  - Blocks that would otherwise be orphaned and abandoned.
+- How long can uncle blocks get?
+  - Infinitely (however unlikely), the uncle reward however has diminishing returns as the lineage increases
+- How does nakamoto consensus differ from GHOST?
+  - Nakamoto consensus picks the longest chain whereas GHOST picks the heaviest one.
