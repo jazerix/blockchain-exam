@@ -52,3 +52,31 @@ Escrow is a big topic within smart contracts. Sites like Den Blå Avis could uti
   - Infinitely (however unlikely), the uncle reward however has diminishing returns as the lineage increases
 - How does nakamoto consensus differ from GHOST?
   - Nakamoto consensus picks the longest chain whereas GHOST picks the heaviest one.
+- What are nephew block?
+  - Child blocks added to an uncle block
+- Why is not feasible to continue mining uncle blocks?
+  - Nephew blocks will diminish in reward to discourage miners from going down that path
+- How does Ethereum get away with a turing complete language?
+  - Processing time is bound to a fee. A transaction can keep processing until its fee (GAS) is depleted
+- What does enforceability mean?
+  - It means that the contract is guaranteed to output a given value, given the input is valid and you pay enough to cover the fees.
+- What is the programming language of smart contracts in ethereum?
+  - The programming language used is called Solidity.
+- How many times are smart contracts executed on the blockchain?
+  - The smart contract is executed for every miner trying to mine the transaction. When the smart contract is picked up by a miner, the contract is run in EVM to test the validity of the contract before it is broadcasted to the whole network.
+- How do smart contracts differ from normal contracts?
+  - Verbosity, you need to specify everything and leave nothing to interpretatio
+- What is GHOST?
+  - The consensus algorithm utilised by ethereum. As blocks happen at approximately 15 seconds in the blockchain, the length of the chain is not used to determine the source of truth, but the weight of the chain is. This is useful as forks can happen at any given time due to the fast generation of blocks. Here is the abandoned (uncle) blocks included and these add to the weight of the chain.
+- What is a state machine?
+  - A machine that keeps track of state, allows ethereum to be more than just a money store and keep track of the "current" value of a variable.
+- Why is the state significant?
+  - Ethereum use states to determine the truth in the blockchain.
+- What is the ethereum virtual machine EVM?
+  - Is a virtual machine that is deeply connected to the ethereum network and allows contracts to be run in an isolated manner. 
+- How are smart contracts unstoppable?
+  - Contracts can't be stopped, their actions against the blockchain (state) is immutable - the state can only be altered with a new transaction.
+- What is web3?
+  - Websites published on the blockchain
+- What types are supported in ethereum?
+  - Boolean, int, address, enums, functions, arrays, structs & mappings

@@ -4,7 +4,6 @@ A blockchain is inherently more:
 - More costly
 - Less performant
 
-
 Decentralized blockchains are getting expensive, due to their low amount of throughput and a high demand for transaction; this creates a situation where there simply isn't enough time to process all transactions, and thus users have to increase the fee to ensure their transaction will be picked for mining/processing.
 
 Decentralized blockchains are costly because:
@@ -33,3 +32,13 @@ A permissionless blockchain uses it's consensus algorithm along with crytpograph
   - The fee will be taken, the code that affected the state of the blockchain will be rolled back.
 - Will basic performance requirements be met by the design of a blockchain-based system?
   - Not currently, as it's unable to keep up with demand
+- What is a public key?
+  - A public key is derived from your private key and can used to make sure that things you sign with your private key match the public one. In blockchain this is used to ensure that you are actually the sender of the transaction.
+- How do blockchains address security?
+  - The public key is basically the address (or a derivative thereof). When a user broadcasts a transaction they sign the transaction, this allows receiver to validate the signature against the address (public key). Should the address change, the signature will no longer match and the transaction is now invalid.
+- What happens if you only have one node in the system?
+  - It defeats the purpose :)
+- Are permissioned (hyperledger) blockchains maintainable?
+  - Yes, way easier than public ones. You only need to update the peers in the same channel.
+- Are public blockchains maintainable?
+  -  Yes, but the majority needs to accept it and update. Additionally a blockchain can be split, if some participants don't want to update.
